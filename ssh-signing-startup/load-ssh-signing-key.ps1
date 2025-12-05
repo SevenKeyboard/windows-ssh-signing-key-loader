@@ -9,7 +9,7 @@ $scriptPath = $MyInvocation.MyCommand.Path
 $keyPath    = Join-Path $env:USERPROFILE ".ssh\id_ed25519"
 
 # Single-line comment marker, e.g.: your_email@example.com
-$commentFile = Join-Path $PSScriptRoot "ssh_signing_key_comment.env"
+$commentFile = Join-Path $PSScriptRoot "ssh-signing-key-comment.env"
 $comment     = ""
 if (Test-Path $commentFile) {
     $comment = (Get-Content $commentFile -Raw).Trim()
